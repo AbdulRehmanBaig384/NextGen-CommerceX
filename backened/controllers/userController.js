@@ -4,11 +4,11 @@ import bcrypt from 'bcryptjs'
 import generateToken from "../utils/createToken.js";
 import express from "express";
 const createUser=asyncHandler(async (request,response)=>{
+    
     const {username,email,password}=request.body
-    //  console.log(username)
-    //  console.log(email)
-    //  console.log(password)
+  
     if(!username || !email || !password){
+        
         throw new Error("Please fill out the all input")
     }
     const userExist=await User.findOne({email})
