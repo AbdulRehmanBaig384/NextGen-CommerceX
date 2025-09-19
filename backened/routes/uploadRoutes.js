@@ -1,5 +1,4 @@
 import path from 'path'
-// import express, { response } from 'express'
 import multer from 'multer'
 import express from 'express'
 const router=express.Router()
@@ -40,7 +39,6 @@ router.post('/',(request,response)=>{
             response.status(400).send({message:'No image file Provided'})
         }
     })
-    // response.send('hello')
 })
 
 export default router
