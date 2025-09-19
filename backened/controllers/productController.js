@@ -5,7 +5,6 @@ const addProduct = asyncHandler(async (req, res) => {
   try {
     const { name, description, price, category, quantity, brand } = req.fields;
 
-    // Validation
     switch (true) {
       case !name:
         return res.json({ error: "Name is required" });
@@ -33,8 +32,6 @@ const addProduct = asyncHandler(async (req, res) => {
 const updateProductDetails = asyncHandler(async (req, res) => {
   try {
     const { name, description, price, category, quantity, brand } = req.fields;
-
-    // Validation
     switch (true) {
       case !name:
         return res.json({ error: "Name is required" });
@@ -57,7 +54,7 @@ const updateProductDetails = asyncHandler(async (req, res) => {
     );
 
     await product.save();
-
+    
     res.json(product);
   } catch (error) {
     console.error(error);
@@ -206,6 +203,14 @@ const filterProducts = asyncHandler(async (req, res) => {
   }
 });
 
-export {
-  addProduct, updateProductDetails, removeProduct, fetchProducts, fetchProductById, fetchAllProducts, addProductReview, fetchTopProducts, fetchNewProducts, filterProducts,
+export { addProduct, updateProductDetails, removeProduct, fetchProducts, fetchProductById, fetchAllProducts, addProductReview, fetchTopProducts, fetchNewProducts, filterProducts,
 };
+
+
+
+
+
+
+
+
+console.log('Made By Abddul Rehman')
