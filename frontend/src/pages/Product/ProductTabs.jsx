@@ -72,48 +72,7 @@
 //                   </p>
 //                 </div>
 
-//                 <p className='my-4'>{review.comment}</p>
-//                 <Ratings value={review.rating}/>
-//               </div>
-             
-          
-//           ))
-// }
-//           </div>
-        
-//           </>
-
-//         )}
-//       </section>
-
-//       <section>
-//         {activeTab===3 &&(
-//           <section className='ml-[4rem] flex flex-wrap'>
-//             {data?.map((product)=>{
-//               <div key={product._id} className='m-4'>
-//                 <SmallProduct product={product}/>
-//               </div>
-//             })}
-//         </section>)}
-//       </section>
-
-
-//     </div>
-//   )
-// }
-
-// export default ProductTabs
-
-
-
-
-
-
-
-
-
-
-
+//                 <p className='my-4'>{r\
 
 
 
