@@ -1,6 +1,6 @@
 import { apiSlice } from "./apiSlice";
 import { CATEGORY_URL } from "../constant";
-// import { updateCategory } from "../../../../backened/controllers/categoryController";
+import { updateCategory } from "../../../../backened/controllers/categoryController";
 
 export const categoryApiSlice=apiSlice.injectEndpoints({
     endpoints:(builder)=>({
@@ -27,11 +27,7 @@ export const categoryApiSlice=apiSlice.injectEndpoints({
                 method:"DELETE"
             })
         }),
-    //     fetchCategories:builder.query({
-    //         query:()=>`${CATEGORY_URL}/categories`,
-    //         providesTags:['Category'],
-    //         keepUnusedDataFor:5,
-    //     })
+
           fetchCategories:builder.query({
             query:()=>`${CATEGORY_URL}`,
             providesTags:['Category'],
