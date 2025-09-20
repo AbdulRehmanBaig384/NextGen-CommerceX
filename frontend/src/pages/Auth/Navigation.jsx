@@ -119,19 +119,6 @@ const Navigation = () => {
         </ul>
 
            )}
-
-        {/* <ul>
-            <li>
-                 <Link to='/login' className='flex items-center transition-transform transform hover:translate-x-2 '  > <AiOutlineLogin  className='text-xl font-bold '/>
-            <span className='hidden p-2 nav-item-name'>Login</span>{" "}
-            </Link>
-            </li>
-             <li>
-                 <Link to='/register' className='flex items-center transition-transform transform hover:translate-x-2 '  > <AiOutlineUserAdd  className='text-xl font-bold '/>
-            <span className='hidden p-2 nav-item-name'>Register</span>{" "}
-            </Link>
-            </li>
-        </ul> */}
       
     </div>
    
