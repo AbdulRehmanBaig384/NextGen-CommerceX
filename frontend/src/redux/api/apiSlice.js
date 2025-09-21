@@ -24,16 +24,4 @@ export const apiSlice = createApi({
 //   baseUrl: 'http://localhost:5000/api',
 //   prepareHeaders: (headers, { getState }) => {
 //     // Get token from your redux state - adjust path as per your store structure
-//     const token = getState().auth.user?.token;
-//     if (token) {
-//       headers.set('authorization', `Bearer ${token}`);
-//     }
-//     return headers;
-//   }
-// });
-
-// export const apiSlice = createApi({
-//   baseQuery,
-//   endpoints: () => ({})
-// });
-// 
+//     const token = getState().auth.user?.token
