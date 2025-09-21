@@ -27,19 +27,10 @@ export const productApiSlice=apiSlice.injectEndpoints({
     ,
     keepUnusedDataFor:5,
           }),
-
-//           createProduct:builder.mutation({
-//             query:(productData)=>({
-//             url:`${PRODUCT_URL}`,
-//             method:'POST',
-//             body:productData
-//           })
-//         ,invalidatesTags:['Product']
-//         })
-
+        
 createProduct: builder.mutation({
   query: (formData) => {
-    const token = localStorage.getItem('token'); // or use Redux selector
+    const token = localStorage.getItem('token');
     return {
       url: '/api/products',
       method: 'POST',
@@ -50,16 +41,6 @@ createProduct: builder.mutation({
     };
   },
 }),
-
-// ,
-        // updateProduct:builder.mutation({
-        //    query:({productId,formData})=>({
-        //     url:`${PRODUCT_URL}/${productId}`,
-        //     method:'PUT',
-        //     body:formData,
-        //   })
-        // }),
-
 
         updateProduct: builder.mutation({
   query: ({ productId, productData }) => ({
