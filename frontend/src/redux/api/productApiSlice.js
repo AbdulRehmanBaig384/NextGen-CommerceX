@@ -102,15 +102,7 @@ createProduct: builder.mutation({
         })
     })})
 
-    export const{useGetProductByIdQuery
-      ,useAllProductsQuery,
-      useGetProductDetailsQuery,
-      useCreateProductMutation,
-      useCreateReviewsMutation,
-      useDeleteProductMutation,
-      useGetTopProductQuery,
-      useUpdateProductMutation,
-      useGetNewProductQuery,
-      useUploadProductImageMutation,
-      useGetProductQuery,}=productApiSlice 
+    export const{useGetProductByIdQuery ,useAllProductsQuery, useGetProductDetailsQuery, useCreateProductMutation,  useCreateReviewsMutation,
+      useDeleteProductMutation, useGetTopProductQuery, useUpdateProductMutation, useGetNewProductQuery, useUploadProductImageMutation,
+                 useGetProductQuery,}=productApiSlice 
   
