@@ -18,10 +18,3 @@ export const apiSlice = createApi({
 // // });
 })
 
-// import { fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-
-// const baseQuery = fetchBaseQuery({
-//   baseUrl: 'http://localhost:5000/api',
-//   prepareHeaders: (headers, { getState }) => {
-//     // Get token from your redux state - adjust path as per your store structure
-//     const token = getState().auth.user?.token
