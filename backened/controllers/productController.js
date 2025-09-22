@@ -93,7 +93,8 @@ const fetchProducts = asyncHandler(async (req, res) => {
 
     res.json({ products, page: 1, pages: Math.ceil(count / pageSize), hasMore: false,
     });
-  } catch (error) {
+  } 
+  catch (error) {
     console.error(error);
     res.status(500).json({ error: "Server Error" });
   }
@@ -164,7 +165,8 @@ const addProductReview = asyncHandler(async (req, res) => {
       res.status(404);
       throw new Error("Product not found");
     }
-  } catch (error) {
+  } 
+  catch (error) {
     console.error(error);
     res.status(400).json(error.message);
   }
