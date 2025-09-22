@@ -23,11 +23,13 @@ const addProduct = asyncHandler(async (req, res) => {
     const product = new Product({ ...req.fields });
     await product.save();
     res.json(product);
-  } catch (error) {
+  } 
+  catch (error) {
     console.error(error);
     res.status(400).json(error.message);
   }
-});
+}
+  );
 
 const updateProductDetails = asyncHandler(async (req, res) => {
   try {
@@ -56,7 +58,8 @@ const updateProductDetails = asyncHandler(async (req, res) => {
     await product.save();
     
     res.json(product);
-  } catch (error) {
+  } 
+  catch (error) {
     console.error(error);
     res.status(400).json(error.message);
   }
