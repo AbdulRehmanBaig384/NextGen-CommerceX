@@ -40,7 +40,8 @@ const updateCategory= asyncHandler(async (request,response)=>{
     console.error(error)
     response.status(500).json({error:'Internal server Error'})
   };
-},)
+},
+                                  )
 
 const removeCategory=asyncHandler(async(request,response)=>{
   try{
@@ -59,7 +60,8 @@ const removeCategory=asyncHandler(async(request,response)=>{
     console.log(error)
     response.status(500).json(error.message)
   }
- })
+ }
+    )
 
  const readCategory=asyncHandler(async(request,response)=>{
 try{  const category=await Category.findOne({_id:request.params.id})
