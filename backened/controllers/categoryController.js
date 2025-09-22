@@ -20,8 +20,9 @@ const createCategory=asyncHandler(async(request,response)=>{
 catch(error){
     console.log(error)
     return response.status(400).json(error)
-}})
-
+}
+}
+)
 
 const updateCategory= asyncHandler(async (request,response)=>{
   try{
@@ -34,7 +35,8 @@ const updateCategory= asyncHandler(async (request,response)=>{
        category.name=name
        const updatedCategory=await category.save()
        response.json(updatedCategory)
-  }catch(error){
+  }
+  catch(error){
     console.error(error)
     response.status(500).json({error:'Internal server Error'})
   };
