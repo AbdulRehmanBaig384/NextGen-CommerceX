@@ -64,9 +64,11 @@ const removeCategory=asyncHandler(async(request,response)=>{
     )
 
  const readCategory=asyncHandler(async(request,response)=>{
-try{  const category=await Category.findOne({_id:request.params.id})
+try{ 
+ const category = await Category.findOne({_id:request.params.id})
    response.json(category) 
-}catch(error){
+}
+catch(error){
   console.log(error)
   return response.status(400).json(error.message)
  }
