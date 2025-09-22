@@ -2,6 +2,7 @@ import asyncHandler from "../middleware/asyncHandler.js";
 import Product from "../models/productModal.js";
 
 const addProduct = asyncHandler(async (req, res) => {
+  
   try {
     const { name, description, price, category, quantity, brand } = req.fields;
 
