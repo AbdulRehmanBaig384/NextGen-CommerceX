@@ -60,6 +60,7 @@ const updateProductDetails = asyncHandler(async (req, res) => {
     
     res.json(product);
   } 
+    
   catch (error) {
     console.error(error);
     res.status(400).json(error.message);
