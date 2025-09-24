@@ -9,6 +9,7 @@ const addProduct = asyncHandler(async (req, res) => {
     switch (true) {
       case !name:
         return res.json({ error: "Name is required" });
+        
       case !brand:
         return res.json({ error: "Brand is required" });
       case !description:
@@ -200,6 +201,7 @@ const filterProducts = asyncHandler(async (req, res) => {
 
     let args = {};
     if (checked.length > 0) args.category = checked;
+    
     if (radio.length) args.price = { $gte: radio[0], $lte: radio[1] };
 
     const products = await Product.find(args);
