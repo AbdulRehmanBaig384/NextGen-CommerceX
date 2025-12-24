@@ -80,10 +80,17 @@ createProduct: builder.mutation({
         getNewProduct:builder.query({
           query:()=>`${PRODUCT_URL}/new`,
           keepUnusedDataFor:5,
-        })
+        }),
+        getFilteredProducts: builder.query({
+          query: ({ checked, radio, keyword }) => ({
+            url: `${PRODUCT_URL}/filtered-products`,
+            method: "POST",
+            body: { checked, radio, keyword },
+          }),
+        }),
     })})
 
     export const{useGetProductByIdQuery ,useAllProductsQuery, useGetProductDetailsQuery, useCreateProductMutation,  useCreateReviewsMutation,
       useDeleteProductMutation, useGetTopProductQuery, useUpdateProductMutation, useGetNewProductQuery, useUploadProductImageMutation,
-                 useGetProductQuery,}=productApiSlice 
+                 useGetProductQuery, useGetFilteredProductsQuery}=productApiSlice 
   

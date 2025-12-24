@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import {
   useGetProductDetailsQuery,
-  useCreateReviewMutation,
+  useCreateReviewsMutation,
 } from "../../redux/api/productApiSlice";
 import Loader from "../../components/Loader";
 import Message from "../../components/Message";
@@ -19,7 +19,7 @@ import moment from "moment";
 import HeartIcon from "./HeartIcon";
 import Ratings from "./Ratings";
 import ProductTabs from "./ProductTabs";
-import { addToCart } from "../../redux/features/cart/cartSlice";
+import { addToCart } from "../../redux/featured/Cart/cartSlice";
 
 const ProductDetails = () => {
   const { id: productId } = useParams();
@@ -40,7 +40,7 @@ const ProductDetails = () => {
   const { userInfo } = useSelector((state) => state.auth);
 
   const [createReview, { isLoading: loadingProductReview }] =
-    useCreateReviewMutation();
+    useCreateReviewsMutation();
 
   const submitHandler = async (e) => {
     e.preventDefault();

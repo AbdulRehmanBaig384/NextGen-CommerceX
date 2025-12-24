@@ -1,6 +1,6 @@
 import express from 'express';
 import formidable from 'express-formidable';
-import { addProduct,  updateProductDetails, removeProduct, fetchProducts, fetchProductById, fetchAllProducts, addProductReview, fetchTopProducts, fetchNewProducts,
+import { addProduct,  updateProductDetails, removeProduct, fetchProducts, fetchProductById, fetchAllProducts, addProductReview, fetchTopProducts, fetchNewProducts, filterProducts
 } from '../controllers/productController.js';
 
 import { authenticate, authorizeAdmin } from '../middleware/authMiddleware.js';
