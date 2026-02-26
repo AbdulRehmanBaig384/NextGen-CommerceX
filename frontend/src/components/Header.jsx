@@ -3,17 +3,13 @@ import Loader from "./Loader";
 import SmallProduct from "../pages/Product/SmallProduct";
 import ProductCarousel from "../pages/Product/ProductCarousel";
 const Header = () => {
-
-
     const {data,isLoading,error}=useGetTopProductQuery();
-
     if(isLoading){
    return <Loader/>
     }
     if(error){
         return <h1>Error</h1>
     }
-    
   return (
     <>
       <div className="flex justify-around">
