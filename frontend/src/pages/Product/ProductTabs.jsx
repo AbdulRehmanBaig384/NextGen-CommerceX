@@ -135,11 +135,7 @@ const ProductTabs = ({ loadingProductReview, userInfo, submitHandler, rating, se
               <Loader />
             ) : (
               <>
-                <p>No related products implemented yet</p>
-                {/* 
-                 For real implementation, we need a query to fetch related products
-                 For now, let's leave it as is or fetch top products as placeholder
-                */}
+                <p>No related products Found</p>
               </>
             )}
           </section>
